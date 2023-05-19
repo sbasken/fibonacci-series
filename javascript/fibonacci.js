@@ -1,5 +1,12 @@
 function fibonacci(num) {
-  // type your code here
+  if (num < 2) {
+    return num
+  }
+  const numArray = [0, 1]
+  for (let i = 2; i < num + 1; i++) {
+    numArray[i] = numArray[i - 2] + numArray[i - 1]
+  }
+  return numArray[numArray.length - 1]
 }
 
 if (require.main === module) {
